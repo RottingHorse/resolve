@@ -14,7 +14,7 @@ fn main() {
         .arg(Arg::with_name("domain-name").required(true))
         .get_matches();
 
-    let domain_name_raw = app.value_of("domain_name").unwrap();
+    let domain_name_raw = app.value_of("domain-name").unwrap();
     let domain_name = Name::from_ascii(&domain_name_raw).unwrap();
 
     let dns_server_raw = app.value_of("dns-server").unwrap();
